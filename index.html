@@ -13,33 +13,47 @@
 
 <body>
     <div class="container-principal d-flex justify-content-start">
-        <div class="container-img">
-            <div class="container-logo d-flex justify-content-center">
-                <img src="/img/Logo.png" alt="logo alura"">
-            </div>
-        </div>
-        <div class=" container-input">
-                <div>
-                    <textarea class="input" name="textarea" placeholder="Ingrese el texto aqui" rows="10"
-                        cols="60"></textarea>
-                </div>
-                <div>
-                    <div class="alerta-input d-flex align-items-center">
-                        <i class='bx bxs-error-circle'></i>
-                        <p class="text-secondary m-0">Solo letras minusculas y sin
-                            acentos</p>
-                    </div>
-                    <div class="btns-container">
-                        <button class="btn-encriptar">Encriptar</button>
-                        <button class="btn-desencriptar">Desencriptar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="container-output">
 
+
+
+        <div class="container-logo d-flex justify-content-center">
+            <img src="/img/Logo.png" alt="logo alura"">
+        </div>
+        
+
+        <div class=" container-input">
+            <div>
+                <textarea class="input" name="textarea" placeholder="Ingrese el texto aqui" rows="10"
+                    cols="60"></textarea>
+            </div>
+            <div>
+                <div class="alerta-input d-flex align-items-center">
+                    <i class='bx bxs-error-circle'></i>
+                    <p class="text-secondary m-0">Solo letras minusculas y sin
+                        acentos</p>
+                </div>
+                <div class="btns-container d-flex justify-content-center">
+                    <button class="btn-encriptar">Encriptar</button>
+                    <button class="btn-desencriptar">Desencriptar</button>
+                </div>
             </div>
         </div>
-        <script src="script.js"></script>
+
+
+        <div class="container-output d-flex justify-content-center align-items-center">
+            <div class="d-block text-center">
+                <img src="/img/Muñeco.png" alt="personaje-pensando">
+                <p class="title-output">Ningún mensaje fue encontrado</p>
+                <p class="text-output">Ingresa el texto que deseas encriptar o desencriptar."</p>
+                <button class="btn-copiar">Copiar</button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

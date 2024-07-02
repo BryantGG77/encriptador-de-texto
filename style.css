@@ -10,6 +10,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
+    min-height: 100%;
 }
 
 :root {
@@ -24,11 +25,13 @@ body {
 }
 
 .container-logo {
+
     width: 120px;
     height: 48px;
 }
 
 .container-input {
+
     height: 879px;
     width: 1300px;
     padding: 80px;
@@ -51,16 +54,59 @@ body {
 }
 
 .btns-container {
-    background-color: aqua;
-    width: 400px;
+    width: 1115px;
     height: 67px;
+    margin-top: 20px;
 }
 
-.btn-encriptar {}
+.btn-encriptar,
+.btn-desencriptar {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: none;
+    font-size: 24px;
+}
+
+.btn-encriptar {
+    margin-right: 20px;
+    background-color: #0a3871;
+    color: white;
+}
+
+.btn-desencriptar {
+    background-color: #d8dfe8;
+    border: 1px solid #0a3871;
+}
 
 .container-output {
+    padding: 20px;
     height: 879px;
     width: 400px;
     background-color: white;
     border-radius: 32px;
 }
+
+.title-output {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.text-output {
+    color: rgb(73, 66, 66);
+}
+
+/* .btn-copiar {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: none;
+    font-size: 24px;
+    margin-top: 20px;
+    background-color: #0a3871;
+    color: white;
+} */
