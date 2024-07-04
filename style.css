@@ -14,14 +14,15 @@ body {
 }
 
 :root {
-    --color-principal: #f3f5fc;
+    --color-background: #f3f5fc;
+    --color-principal: #0a3871;
 }
 
 .container-principal {
     height: 100vh;
     width: 100vw;
     padding: 30px;
-    background-color: var(--color-principal);
+    background-color: var(--color-background);
 }
 
 .container-logo {
@@ -35,7 +36,7 @@ body {
     height: 879px;
     width: 1300px;
     padding: 80px;
-    background-color: var(--color-principal);
+    background-color: var(--color-background);
 }
 
 .input {
@@ -43,12 +44,12 @@ body {
     border: none;
     outline: none;
     font-size: 40px;
-    color: #0a3871;
+    color: var(--color-principal);
     border: none;
 }
 
 ::placeholder {
-    color: #0a3871;
+    color: var(--color-principal);
     font-size: 40px;
 
 }
@@ -70,13 +71,13 @@ body {
 
 .btn-encriptar {
     margin-right: 20px;
-    background-color: #0a3871;
+    background-color: var(--color-principal);
     color: white;
 }
 
 .btn-desencriptar {
     background-color: #d8dfe8;
-    border: 1px solid #0a3871;
+    border: 1px solid var(--color-principal);
 }
 
 .container-output {
@@ -100,13 +101,27 @@ body {
     color: rgb(73, 66, 66);
 }
 
-/* .btn-copiar {
+.container-text-output {
+    width: 320px;
+    height: 600px;
+    overflow: auto;
+}
+
+.salida-btn {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: start;
+    color: var(--color-principal);
+    padding: 20px;
+}
+
+.btn-copiar {
     width: 328px;
     height: 67px;
     border-radius: 24px;
     border: none;
     font-size: 24px;
     margin-top: 20px;
-    background-color: #0a3871;
+    background-color: var(--color-principal);
     color: white;
-} */
+}

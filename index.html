@@ -28,20 +28,20 @@
             </div>
             <div>
                 <div class="alerta-input d-flex align-items-center">
-                    <i class='bx bxs-error-circle'></i>
+                    <i class='bx bxs-error-circle m-2'></i>
                     <p class="text-secondary m-0">Solo letras minusculas y sin
                         acentos</p>
                 </div>
                 <div class="btns-container d-flex justify-content-center">
-                    <button class="btn-encriptar">Encriptar</button>
-                    <button class="btn-desencriptar">Desencriptar</button>
+                    <button onclick="encriptarTexto();" class="btn-encriptar">Encriptar</button>
+                    <button onclick="desencriptarTexto();" class="btn-desencriptar">Desencriptar</button>
                 </div>
             </div>
         </div>
 
 
         <div class="container-output d-flex justify-content-center align-items-center">
-            <div class="d-block text-center">
+            <div class="output d-block text-center">
                 <img src="/img/Muñeco.png" alt="personaje-pensando">
                 <p class="title-output">Ningún mensaje fue encontrado</p>
                 <p class="text-output">Ingresa el texto que deseas encriptar o desencriptar."</p>
@@ -52,7 +52,7 @@
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
