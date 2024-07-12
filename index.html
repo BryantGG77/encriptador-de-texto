@@ -5,53 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Encriptador de texto</title>
 </head>
 
 <body>
-    <div class="container-principal d-flex justify-content-start">
+    <header></header>
+    <main class="encriptador">
 
+        <section class="encriptador__imagen">
+            <img src="/assets/Logo.png" alt="Logo de alura">
+        </section>
 
-
-        <div class="container-logo d-flex justify-content-center">
-            <img src="/img/Logo.png" alt="logo alura"">
-        </div>
-        
-
-        <div class=" container-input">
-            <div>
-                <textarea class="input" name="textarea" placeholder="Ingrese el texto aqui" rows="10"
-                    cols="60"></textarea>
+        <section class="encriptador__entrada">
+            <textarea class="encriptador__entrada__input" name="input" placeholder="Ingrese el texto aqui" cols="35"
+                rows="10"></textarea>
+            <p class="encriptador__entrada__aviso"> <span class="icon__entrada__aviso"><i
+                        class='bx bxs-error-circle'></i></span> Solo letras
+                minúsculas y sin
+                acentos</p>
+            <div class="encriptador__entrada__botones">
+                <button class="encriptador__entrada__botones__btn" onclick="encriptarTexto()">Encriptar</button>
+                <button class="encriptador__entrada__botones__btn" onclick="desencriptarTexto()">Desencriptar</button>
             </div>
-            <div>
-                <div class="alerta-input d-flex align-items-center">
-                    <i class='bx bxs-error-circle m-2'></i>
-                    <p class="text-secondary m-0">Solo letras minusculas y sin
-                        acentos</p>
-                </div>
-                <div class="btns-container d-flex justify-content-center">
-                    <button onclick="encriptarTexto();" class="btn-encriptar">Encriptar</button>
-                    <button onclick="desencriptarTexto();" class="btn-desencriptar">Desencriptar</button>
-                </div>
+        </section>
+
+        <section class="encriptador__salida">
+            <div class="encriptador__salida__texto">
+                <img src="/assets/Muñeco.png" alt="Personaje">
+                <p class="encriptador__salida__aviso">Ningún mensaje fue encontrado</p>
+                <p class="encriptador__salida__parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-        </div>
+        </section>
 
+    </main>
 
-        <div class="container-output d-flex justify-content-center align-items-center">
-            <div class="output d-block text-center">
-                <img src="/img/Muñeco.png" alt="personaje-pensando">
-                <p class="title-output">Ningún mensaje fue encontrado</p>
-                <p class="text-output">Ingresa el texto que deseas encriptar o desencriptar."</p>
-            </div>
-
-
-        </div>
-
-    </div>
-
+    <footer></footer>
     <script src="main.js"></script>
 </body>
 

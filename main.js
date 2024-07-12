@@ -1,7 +1,4 @@
 
-
-
-
 function asignarTextoElemento(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
@@ -14,7 +11,7 @@ function limpiarInput(elemento) {
 }
 
 function copiarTexto() {
-    let texto = document.querySelector(".salida-btn").textContent;
+    let texto = document.querySelector(".encriptador__salida__resultado").textContent;
     navigator.clipboard.writeText(texto);
     alert("Texto copiado");
     return;
@@ -22,7 +19,7 @@ function copiarTexto() {
 
 
 function encriptarTexto() {
-    let texto = document.querySelector(".input").value;
+    let texto = document.querySelector(".encriptador__entrada__input").value;
     if (texto == "") {
         alert("No hay texto para encriptar");
     } else {
@@ -33,19 +30,16 @@ function encriptarTexto() {
             .replace(/a/gi, "ai")
             .replace(/o/gi, "ober")
             .replace(/u/gi, "ufat");
-        asignarTextoElemento(".output", `<div class="container-text-output p-0">
-            <p class="salida-btn">${textoEncriptado}</p>
-            </p>
-            </div>
-            <button onclick="copiarTexto();" class="btn-copiar">Copiar</button>`);
-        limpiarInput('.input');
+        asignarTextoElemento(".encriptador__salida__texto", `<p class="encriptador__salida__resultado">${textoEncriptado}</p>
+            <button onclick="copiarTexto();">Copiar</button>`);
+        limpiarInput('.encriptador__entrada__input');
         return;
     }
 
 }
 
 function desencriptarTexto() {
-    let texto = document.querySelector(".input").value;
+    let texto = document.querySelector(".encriptador__entrada__input").value;
     if (texto == "") {
         alert("No hay texto para desencriptar");
     } else {
@@ -56,12 +50,9 @@ function desencriptarTexto() {
             .replace(/ai/gi, "a")
             .replace(/ober/gi, "o")
             .replace(/ufat/gi, "u");
-        asignarTextoElemento(".output", `<div class="container-text-output p-0">
-            <p class="salida-btn">${textoDesencriptado}</p>
-            </p>
-            </div>
-            <button onclick="copiarTexto();" class="btn-copiar">Copiar</button>`);
-        limpiarInput('.input');
+        asignarTextoElemento(".encriptador__salida__texto", `<p class="encriptador__salida__resultado">${textoDesencriptado}</p>
+            <button onclick="copiarTexto();">Copiar</button>`);
+        limpiarInput('.encriptador__entrada__input');
         return;
     }
 }

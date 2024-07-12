@@ -1,127 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    min-height: 100%;
 }
 
 :root {
     --color-background: #f3f5fc;
     --color-principal: #0a3871;
+
+    --fuente-inter: 'Inter', sans-serif;
 }
 
-.container-principal {
+body {
     height: 100vh;
-    width: 100vw;
-    padding: 30px;
     background-color: var(--color-background);
+    box-sizing: border-box;
 }
 
-.container-logo {
-
-    width: 120px;
-    height: 48px;
+.encriptador {
+    height: 91.5%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    gap: 80px;
 }
 
-.container-input {
-
-    height: 879px;
-    width: 1300px;
-    padding: 80px;
-    background-color: var(--color-background);
+.encriptador__imagen {
+    width: 10%;
 }
 
-.input {
-    background: transparent;
+.encriptador__entrada {
+    width: 60%;
+    padding-top: 168px;
+}
+
+.encriptador__entrada__input {
+    width: 100%;
+    height: 70%;
     border: none;
     outline: none;
-    font-size: 40px;
+    resize: none;
+    font-size: 32px;
+    font-family: var(--fuente-inter);
     color: var(--color-principal);
-    border: none;
+    background-color: var(--color-background);
 }
 
-::placeholder {
+.encriptador__entrada__input::placeholder {
     color: var(--color-principal);
-    font-size: 40px;
-
+    font-family: var(--fuente-inter);
+    font-size: 32px;
 }
 
-.btns-container {
-    width: 1115px;
-    height: 67px;
-    margin-top: 20px;
+.encriptador__entrada__aviso {
+    padding: 16px 0 16px 0;
+    color: #6b7178;
+    font-family: var(--fuente-inter);
+    font-size: 12px;
 }
 
-.btn-encriptar,
-.btn-desencriptar {
-    width: 328px;
-    height: 67px;
+.icon__entrada__aviso {
+    color: black;
+    font-size: 16px;
+}
+
+.encriptador__entrada__botones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.encriptador__entrada__botones__btn {
+    width: 50%;
+    padding: 24px 0 24px 0;
     border-radius: 24px;
     border: none;
-    font-size: 24px;
-}
-
-.btn-encriptar {
-    margin-right: 20px;
-    background-color: var(--color-principal);
+    font-family: var(--fuente-inter);
+    font-size: 16px;
     color: white;
+    background-color: var(--color-principal);
+    cursor: pointer;
 }
 
-.btn-desencriptar {
-    background-color: #d8dfe8;
+.encriptador__entrada__botones__btn:hover {
+    padding: 23px 0 23px 0;
+    background-color: #D8DFE8;
+    color: var(--color-principal);
     border: 1px solid var(--color-principal);
 }
 
-.container-output {
-    padding: 20px;
-    height: 879px;
-    width: 400px;
+.encriptador__salida {
+    width: 30%;
     background-color: white;
     border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    padding: 0 32px 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.title-output {
-    font-size: 24px;
-    font-weight: 500;
+.encriptador__salida__texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.encriptador__salida__aviso {
+    font-family: var(--fuente-inter);
     text-align: center;
-    color: black;
-    margin-top: 20px;
-    padding: 20px;
-}
-
-.text-output {
-    color: rgb(73, 66, 66);
-}
-
-.container-text-output {
-    width: 320px;
-    height: 600px;
-    overflow: auto;
-}
-
-.salida-btn {
-    font-size: 20px;
-    font-weight: 500;
-    text-align: start;
-    color: var(--color-principal);
-    padding: 20px;
-}
-
-.btn-copiar {
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
-    border: none;
+    padding-top: 32px;
     font-size: 24px;
-    margin-top: 20px;
-    background-color: var(--color-principal);
-    color: white;
+    color: #343a40;
+    font-weight: bold;
+    width: 60%;
+}
+
+.encriptador__salida__parrafo {
+    font-family: var(--fuente-inter);
+    text-align: center;
+    font-size: 16px;
+    color: #495057;
+    padding-top: 16px;
+    width: 65%;
 }
