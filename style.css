@@ -14,16 +14,14 @@
 }
 
 body {
-    height: 100vh;
     background-color: var(--color-background);
     box-sizing: border-box;
 }
 
 .encriptador {
-    height: 91.5%;
     display: flex;
     justify-content: center;
-    padding: 40px;
+    padding: 2.15% 2.15% 7.45% 2.15%;
     gap: 80px;
 }
 
@@ -31,9 +29,13 @@ body {
     width: 10%;
 }
 
+.encriptador__imagen__img {
+    width: 100%;
+}
+
 .encriptador__entrada {
-    width: 60%;
-    padding-top: 168px;
+    width: 70%;
+    padding-top: 9.3%;
 }
 
 .encriptador__entrada__input {
@@ -42,7 +44,7 @@ body {
     border: none;
     outline: none;
     resize: none;
-    font-size: 32px;
+    font-size: 2rem;
     font-family: var(--fuente-inter);
     color: var(--color-principal);
     background-color: var(--color-background);
@@ -51,19 +53,19 @@ body {
 .encriptador__entrada__input::placeholder {
     color: var(--color-principal);
     font-family: var(--fuente-inter);
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .encriptador__entrada__aviso {
     padding: 16px 0 16px 0;
     color: #6b7178;
     font-family: var(--fuente-inter);
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .icon__entrada__aviso {
     color: black;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .encriptador__entrada__botones {
@@ -73,13 +75,14 @@ body {
     gap: 24px;
 }
 
-.encriptador__entrada__botones__btn {
+.encriptador__entrada__botones__btn,
+.encriptador__salida__copiar {
     width: 50%;
     padding: 24px 0 24px 0;
     border-radius: 24px;
     border: none;
     font-family: var(--fuente-inter);
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
     background-color: var(--color-principal);
     cursor: pointer;
@@ -112,11 +115,15 @@ body {
     align-items: center;
 }
 
+.encriptador__salida__imagen {
+    width: 75%;
+}
+
 .encriptador__salida__aviso {
     font-family: var(--fuente-inter);
     text-align: center;
-    padding-top: 32px;
-    font-size: 24px;
+
+    font-size: 1.5rem;
     color: #343a40;
     font-weight: bold;
     width: 60%;
@@ -125,8 +132,91 @@ body {
 .encriptador__salida__parrafo {
     font-family: var(--fuente-inter);
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     color: #495057;
     padding-top: 16px;
     width: 65%;
+}
+
+.encriptador__salida__resultado {
+    font-family: var(--fuente-inter);
+    align-items: start;
+    text-align: start;
+    font-size: 1.5rem;
+    color: #495057;
+    height: 69%;
+    overflow: auto;
+    resize: none;
+}
+
+.encriptador__salida__copiar {
+    margin-top: 32px;
+    width: 100%;
+}
+
+.encriptador__salida__copiar:hover {
+    background-color: #D8DFE8;
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+}
+
+.footer {
+    background-color: var(--color-principal);
+    color: var(--color-background);
+    font-family: var(--fuente-inter);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    padding: 24px 0 24px 0;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .encriptador {
+        flex-direction: column;
+        gap: 64px;
+        padding: 4.5% 4.5% 7.45% 4.5%;
+    }
+
+    .encriptador__imagen__img {
+        width: auto;
+    }
+
+    .encriptador__entrada {
+        width: auto;
+        padding-top: 116px;
+    }
+
+    .encriptador__salida {
+        width: auto;
+        height: auto;
+    }
+
+    .encriptador__salida__imagen {
+        display: none;
+    }
+
+    .encriptador__salida__texto {
+        padding: 32px;
+    }
+
+    .encriptador__salida__resultado {
+        width: auto;
+        height: auto;
+        padding: 32px 32px 0 32px;
+    }
+
+    .encriptador__salida__copiar {
+        margin: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .encriptador__entrada__botones {
+        flex-direction: column;
+    }
+
+    .encriptador__entrada__botones__btn {
+        width: 100%;
+    }
 }

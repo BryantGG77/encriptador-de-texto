@@ -30,8 +30,8 @@ function encriptarTexto() {
             .replace(/a/gi, "ai")
             .replace(/o/gi, "ober")
             .replace(/u/gi, "ufat");
-        asignarTextoElemento(".encriptador__salida__texto", `<p class="encriptador__salida__resultado">${textoEncriptado}</p>
-            <button onclick="copiarTexto();">Copiar</button>`);
+        asignarTextoElemento(".encriptador__salida", `<p class="encriptador__salida__resultado">${textoEncriptado}</p>
+            <button class="encriptador__salida__copiar" onclick="copiarTexto();">Copiar</button>`);
         limpiarInput('.encriptador__entrada__input');
         return;
     }
@@ -50,8 +50,8 @@ function desencriptarTexto() {
             .replace(/ai/gi, "a")
             .replace(/ober/gi, "o")
             .replace(/ufat/gi, "u");
-        asignarTextoElemento(".encriptador__salida__texto", `<p class="encriptador__salida__resultado">${textoDesencriptado}</p>
-            <button onclick="copiarTexto();">Copiar</button>`);
+        asignarTextoElemento(".encriptador__salida", `<p class="encriptador__salida__resultado">${textoDesencriptado}</p>
+            <button class="encriptador__salida__copiar" onclick="copiarTexto();">Copiar</button>`);
         limpiarInput('.encriptador__entrada__input');
         return;
     }
