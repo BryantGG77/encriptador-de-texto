@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 
 * {
@@ -10,18 +12,19 @@
     --color-background: #f3f5fc;
     --color-principal: #0a3871;
 
-    --fuente-inter: 'Inter', sans-serif;
+
+    --fuente: "Bebas Neue", sans-serif;
 }
 
 body {
-    background-color: var(--color-background);
+    background-image: radial-gradient(circle at 43.84% 120.44%, #f0fcff 0, #d3eef9 25%, #b5def2 50%, #97ceec 75%, #7cbfe7 100%);
     box-sizing: border-box;
 }
 
 .encriptador {
     display: flex;
     justify-content: center;
-    padding: 2.15% 2.15% 7.45% 2.15%;
+    padding: 2.15% 2.15% 5.75% 2.15%;
     gap: 80px;
 }
 
@@ -35,7 +38,7 @@ body {
 
 .encriptador__entrada {
     width: 70%;
-    padding-top: 9.3%;
+    padding-top: 9%;
 }
 
 .encriptador__entrada__input {
@@ -45,22 +48,22 @@ body {
     outline: none;
     resize: none;
     font-size: 2rem;
-    font-family: var(--fuente-inter);
+    font-family: var(--fuente);
     color: var(--color-principal);
-    background-color: var(--color-background);
+    background-color: transparent;
 }
 
 .encriptador__entrada__input::placeholder {
     color: var(--color-principal);
-    font-family: var(--fuente-inter);
+    font-family: var(--fuente);
     font-size: 2rem;
 }
 
 .encriptador__entrada__aviso {
     padding: 16px 0 16px 0;
-    color: #6b7178;
-    font-family: var(--fuente-inter);
-    font-size: 0.75rem;
+    color: #6c7074;
+    font-family: var(--fuente);
+    font-size: 1.2rem;
 }
 
 .icon__entrada__aviso {
@@ -81,17 +84,17 @@ body {
     padding: 24px 0 24px 0;
     border-radius: 24px;
     border: none;
-    font-family: var(--fuente-inter);
-    font-size: 1rem;
-    color: white;
-    background-color: var(--color-principal);
+    font-family: var(--fuente);
+    font-size: 1.5rem;
+    color: var(--color-principal);
+    background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
     cursor: pointer;
 }
 
 .encriptador__entrada__botones__btn:hover {
     padding: 23px 0 23px 0;
-    background-color: #D8DFE8;
-    color: var(--color-principal);
+    background-image: radial-gradient(circle at 50% -20.71%, #a3a7ff 0, #7a8ffc 25%, #3c78f2 50%, #0063e8 75%, #0051de 100%);
+    color: var(--color-background);
     border: 1px solid var(--color-principal);
 }
 
@@ -99,12 +102,15 @@ body {
     width: 30%;
     background-color: white;
     border-radius: 32px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.59);
+    box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.59);
     padding: 0 32px 0 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
 }
 
 .encriptador__salida__texto {
@@ -117,10 +123,11 @@ body {
 
 .encriptador__salida__imagen {
     width: 75%;
+    padding-bottom: 32px;
 }
 
 .encriptador__salida__aviso {
-    font-family: var(--fuente-inter);
+    font-family: var(--fuente);
     text-align: center;
 
     font-size: 1.5rem;
@@ -130,7 +137,7 @@ body {
 }
 
 .encriptador__salida__parrafo {
-    font-family: var(--fuente-inter);
+    font-family: var(--fuente);
     text-align: center;
     font-size: 1rem;
     color: #495057;
@@ -139,11 +146,11 @@ body {
 }
 
 .encriptador__salida__resultado {
-    font-family: var(--fuente-inter);
+    font-family: var(--fuente);
     align-items: start;
     text-align: start;
     font-size: 1.5rem;
-    color: #495057;
+    color: var(--color-principal);
     height: 69%;
     overflow: auto;
     resize: none;
@@ -155,15 +162,16 @@ body {
 }
 
 .encriptador__salida__copiar:hover {
-    background-color: #D8DFE8;
-    color: var(--color-principal);
+    padding: 23px 0 23px 0;
+    background-image: radial-gradient(circle at 50% -20.71%, #a3a7ff 0, #7a8ffc 25%, #3c78f2 50%, #0063e8 75%, #0051de 100%);
+    color: var(--color-background);
     border: 1px solid var(--color-principal);
 }
 
 .footer {
-    background-color: var(--color-principal);
-    color: var(--color-background);
-    font-family: var(--fuente-inter);
+    background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+    color: var(--color-principal);
+    font-family: var(--fuente);
     font-size: 1.5rem;
     display: flex;
     justify-content: center;

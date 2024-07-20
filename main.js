@@ -10,6 +10,7 @@ function limpiarInput(elemento) {
     return;
 }
 
+
 function copiarTexto() {
     let texto = document.querySelector(".encriptador__salida__resultado").textContent;
     navigator.clipboard.writeText(texto);
