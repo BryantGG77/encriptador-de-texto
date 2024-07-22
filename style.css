@@ -170,14 +170,27 @@ body {
 
 .footer {
     background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0 24px 0;
+    text-align: center;
+    gap: 32px;
+}
+
+.footer__redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer__parrafo {
     color: var(--color-principal);
     font-family: var(--fuente);
     font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    padding: 24px 0 24px 0;
-    text-align: center;
 }
+
 
 @media (max-width: 1200px) {
     .encriptador {
@@ -219,6 +232,13 @@ body {
     }
 }
 
+@media (max-width: 580px) {
+    .footer {
+        flex-direction: column;
+    }
+}
+
+
 @media (max-width: 480px) {
     .encriptador__entrada__botones {
         flex-direction: column;
@@ -226,5 +246,9 @@ body {
 
     .encriptador__entrada__botones__btn {
         width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
     }
 }
