@@ -18,7 +18,6 @@ function copiarTexto() {
     return;
 }
 
-
 function encriptarTexto() {
     let texto = document.querySelector(".encriptador__entrada__input").value;
     if (texto == "") {
